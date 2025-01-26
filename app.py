@@ -7,16 +7,15 @@ import streamlit as st
 import os
 
 # Retrieve the API key from Streamlit secrets
-API_KEY = st.secrets["secrets"]["ROBOFLOW_API_KEY"]
-# Initialize Roboflow clients
+api_key = st.secrets["ROBOFLOW_API_KEY"]
 CLIENT = InferenceHTTPClient(
     api_url="https://outline.roboflow.com",
-    api_key=API_KEY
+    api_key=api_key
 )
 
 CLIENT2 = InferenceHTTPClient(
     api_url="https://outline.roboflow.com",
-    api_key=API_KEY
+    api_key=api_key
 )
 
 # Define class names for prediction
